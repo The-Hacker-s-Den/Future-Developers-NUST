@@ -9,6 +9,9 @@ length = numpy.array([32.5,32.5,32.6,32.7,32.6]) # Length
 
 width = numpy.array([22.7,22.8,22.6,22.8,22.7]) # width
 
+#Working On Length
+
+
 #Mean Length
 mean_value_length = numpy.mean(length)
 print("\nLength:\n")
@@ -24,7 +27,7 @@ print("Standard Deviation is: " + str(round(standard_deviation_length, 4)))
 standard_error_length = standard_deviation_length/numpy.sqrt(len(length))
 print("Standard Error in Length: " + str(round(standard_error_length, 4)))
 
-#Width
+#Working On Width
 
 
 #Mean width
@@ -42,7 +45,9 @@ print("Standard Deviation is: " + str(round(standard_deviation_width, 4)))
 standard_error_width = standard_deviation_width/numpy.sqrt(len(width))
 print("Standard Error in width: " + str(round(standard_error_width, 4)))
 
-#Perimeter
+
+
+#Calculating Parameter
 
 Perimeter = 2*(mean_value_length + mean_value_width)
 
@@ -50,7 +55,9 @@ standard_errorperimeter = numpy.sqrt((pow(standard_error_length, 2)+ pow(standar
 
 print("\nThe Perimeter is: " + str(Perimeter) + " ± " + str(round(standard_errorperimeter, 4)))
 
-#Area
+
+
+#Calculating Area
 
 Area = mean_value_length * mean_value_width
 standard_errorarea = numpy.sqrt((pow(standard_error_length, 2) * pow(mean_value_width, 2)) + (pow(standard_error_width, 2) * pow(mean_value_length, 2)))
