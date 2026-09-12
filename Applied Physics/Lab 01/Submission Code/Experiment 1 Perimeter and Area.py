@@ -20,12 +20,12 @@ print("Mean Length is: " + str(mean_value_length))
 
 #Standard Deviation in Length
 standard_deviation_length = numpy.std(length, ddof = 1)
-print("Standard Deviation is: " + str(round(standard_deviation_length, 4)))
+print("Standard Deviation in Length is: " + str(round(standard_deviation_length, 4)))
 
 #Standard Error in Length
 
 standard_error_length = standard_deviation_length/numpy.sqrt(len(length))
-print("Standard Error in Length: " + str(round(standard_error_length, 4)))
+print("Standard Error in Length is: " + str(round(standard_error_length, 4)))
 
 #Working On Width
 
@@ -38,12 +38,12 @@ print("Mean width is: " + str(mean_value_width))
 
 #Standard Deviation in width
 standard_deviation_width = numpy.std(width, ddof = 1)
-print("Standard Deviation is: " + str(round(standard_deviation_width, 4)))
+print("Standard Deviation in Width is: " + str(round(standard_deviation_width, 4)))
 
 #Standard Error in width
 
 standard_error_width = standard_deviation_width/numpy.sqrt(len(width))
-print("Standard Error in width: " + str(round(standard_error_width, 4)))
+print("Standard Error in Width is: " + str(round(standard_error_width, 4)))
 
 
 
