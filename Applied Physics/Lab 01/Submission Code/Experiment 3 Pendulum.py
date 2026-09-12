@@ -79,7 +79,7 @@ print(f"The value of Gravitational Acceleration is: {round(mean_value_gravitatio
 
 #calculate the standard error in the mean value of Gravitational Acceleration
 
-standard_error_gravitational_acceleration = (math.pi*math.pi*4*ratio_length_to_time_period_squared*numpy.sqrt((pow(standard_error_total_length/total_length, 2) + pow(standard_error_squared_time_period/Mean_Squared_Time_Period, 2))))
+standard_error_gravitational_acceleration = (math.pi*math.pi*4*ratio_length_to_time_period_squared*numpy.sqrt((pow(standard_error_total_length/total_length, 2) + pow(2*standard_error_squared_time_period/Mean_Squared_Time_Period, 2))))
 print("The Standard Error in the value of Gravitational Acceleration is: " + str(round(standard_error_gravitational_acceleration, 4)))
 
 
