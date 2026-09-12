@@ -70,21 +70,21 @@ print("The Standard Error in the square of the Time Period is: " + str(round(sta
 
 ratio_length_to_time_period_squared = total_length/Mean_Squared_Time_Period
 
-mean_value_gravitational_acceleration = 4*math.pi*math.pi*ratio_length_to_time_period_squared
+gravitational_acceleration = 4*math.pi*math.pi*ratio_length_to_time_period_squared
 
 
 print("\n\nFinal Results\n\n\n")
-print(f"The value of Gravitational Acceleration is: {round(mean_value_gravitational_acceleration, 4)} cm/s^2")
+print(f"The value of Gravitational Acceleration is: {round(gravitational_acceleration, 4)} cm/s^2")
 
 
 #calculate the standard error in the mean value of Gravitational Acceleration
 
-standard_error_gravitational_acceleration = (math.pi*math.pi*4*ratio_length_to_time_period_squared*numpy.sqrt((pow(standard_error_total_length/total_length, 2) + pow(2*standard_error_squared_time_period/Mean_Squared_Time_Period, 2))))
+standard_error_gravitational_acceleration = (gravitational_acceleration*numpy.sqrt((pow(standard_error_total_length/total_length, 2) + pow((2*standard_error_time_period)/mean_time_period, 2))))
 print("The Standard Error in the value of Gravitational Acceleration is: " + str(round(standard_error_gravitational_acceleration, 4)))
 
 
 #finding percentage error in Gravitational acceleration.
 
-PercentageErrorGravitationalAcceleration = (standard_error_gravitational_acceleration/mean_value_gravitational_acceleration)*100
+PercentageErrorGravitationalAcceleration = (standard_error_gravitational_acceleration/gravitational_acceleration)*100
 print("The Percentage Error in the value of Gravitational Acceleration is: " + str(round(PercentageErrorGravitationalAcceleration, 4)) + "%")
 
