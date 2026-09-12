@@ -19,7 +19,7 @@ print("Mean Length is: " + str(mean_value_length))
 
 
 #Standard Deviation in Length
-standard_deviation_length = numpy.std(length, ddof = 2)
+standard_deviation_length = numpy.std(length, ddof = 1)
 print("Standard Deviation is: " + str(round(standard_deviation_length, 4)))
 
 #Standard Error in Length
@@ -37,7 +37,7 @@ print("Mean width is: " + str(mean_value_width))
 
 
 #Standard Deviation in width
-standard_deviation_width = numpy.std(width, ddof = 2)
+standard_deviation_width = numpy.std(width, ddof = 1)
 print("Standard Deviation is: " + str(round(standard_deviation_width, 4)))
 
 #Standard Error in width
