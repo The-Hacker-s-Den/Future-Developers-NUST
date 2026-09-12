@@ -23,7 +23,7 @@ standard_deviation_radius_of_bob = numpy.std(radii_of_bob, ddof = 1)
 print("The Standard Deviation in the radius of the bob is: " + str(round(standard_deviation_radius_of_bob, 4)))
 
 standard_error_radius_of_bob = standard_deviation_radius_of_bob/numpy.sqrt(len(radii_of_bob))
-print("The Standard Error in the radius of the bob is: " + str(round(standard_error_radius_of_bob, 4)) + '\n\n')
+print("The Standard Error in the radius of the bob is: " + str(round(standard_error_radius_of_bob, 4)) + "\n\n")
 
 
 
@@ -33,7 +33,7 @@ mean_length_of_string = numpy.mean(lengths_of_string)
 print("\nThe mean Length of the string is: " + str(round(mean_length_of_string, 4)) + " cm")
 
 standard_deviation_length_of_string = numpy.std(lengths_of_string, ddof = 1)
-print("ThStandard Deviation is: " + str(round(standard_deviation_length_of_string, 4)))
+print("The Standard Deviation is: " + str(round(standard_deviation_length_of_string, 4)))
 
 standard_error_length_of_string = standard_deviation_length_of_string/numpy.sqrt(len(lengths_of_string))
 print("Standard Error in Length: " + str(round(standard_error_length_of_string, 4)))
