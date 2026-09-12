@@ -17,21 +17,23 @@ time_periods = [t/20 for t in total_time_20_cycles]
 
 #Working On Radius
 mean_radius_of_bob = numpy.mean(radii_of_bob)
-print("\n\nThe mean Radius of the bob is: " + str(round(mean_radius_of_bob, 4)))
+print("\nThe mean Radius of the bob is: " + str(round(mean_radius_of_bob, 4)) + " cm")
 
 standard_deviation_radius_of_bob = numpy.std(radii_of_bob, ddof = 1)
 print("The Standard Deviation in the radius of the bob is: " + str(round(standard_deviation_radius_of_bob, 4)))
 
 standard_error_radius_of_bob = standard_deviation_radius_of_bob/numpy.sqrt(len(radii_of_bob))
-print("The Standard Error in the radius of the bob is: " + str(round(standard_error_radius_of_bob, 4)))
+print("The Standard Error in the radius of the bob is: " + str(round(standard_error_radius_of_bob, 4)) + '\n\n')
 
 
 
 #Working On String
+print("\n\nWorking on the Length of the String:\n")
 mean_length_of_string = numpy.mean(lengths_of_string)
+print("\nThe mean Length of the string is: " + str(round(mean_length_of_string, 4)) + " cm")
 
 standard_deviation_length_of_string = numpy.std(lengths_of_string, ddof = 1)
-print("Standard Deviation is: " + str(round(standard_deviation_length_of_string, 4)))
+print("ThStandard Deviation is: " + str(round(standard_deviation_length_of_string, 4)))
 
 standard_error_length_of_string = standard_deviation_length_of_string/numpy.sqrt(len(lengths_of_string))
 print("Standard Error in Length: " + str(round(standard_error_length_of_string, 4)))
@@ -39,21 +41,21 @@ print("Standard Error in Length: " + str(round(standard_error_length_of_string, 
 
 
 #Working On Total Length of the String
+print("\n\nWorking on the Total Length of the String:\n")
+
 total_length = mean_length_of_string + mean_radius_of_bob
 standard_error_total_length = numpy.sqrt((pow(standard_error_radius_of_bob, 2) + pow(standard_error_length_of_string, 2)))
-print("\nThe mean Total Length of the string is: " + str(round(total_length, 4)))
+print("\nThe Total Length of the string is: " + str(round(total_length, 4)) + " cm")
 
 standard_deviation_total_length_of_string = standard_error_total_length*numpy.sqrt(len(lengths_of_string))
 print("The Standard Deviation in the Total length of the string is: " + str(round(standard_deviation_total_length_of_string, 4)))
 
-standard_error_length_of_string = standard_deviation_length_of_string/numpy.sqrt(len(lengths_of_string))
-print("The Standard Error in the length of the string is: " + str(round(standard_error_length_of_string, 4)))
-
-
 
 #Working On Time Periods
+print("\n\nWorking on the Time Periods:\n")
+
 mean_time_period = numpy.mean(time_periods)
-print("\nThe mean Time Period is: " + str(round(mean_time_period, 4)))
+print("\nThe mean Time Period is: " + str(round(mean_time_period, 4)) + " s")
 
 standard_deviation_time_period = numpy.std(time_periods, ddof = 1)
 print("The Standard Deviation in Time Period is: " + str(round(standard_deviation_time_period, 4)))
@@ -70,17 +72,19 @@ ratio_length_to_time_period_squared = total_length/Mean_Squared_Time_Period
 
 mean_value_gravitational_acceleration = 4*math.pi*math.pi*ratio_length_to_time_period_squared
 
-print("\nThe mean value of Gravitational Acceleration is: " + str(round(mean_value_gravitational_acceleration, 4)))
+
+print("\n\nFinal Results\n\n\n")
+print(f"The value of Gravitational Acceleration is: {round(mean_value_gravitational_acceleration, 4)} cm/s^2")
 
 
-#Plz calculate the standard error in the mean value of Gravitational Acceleration
+#calculate the standard error in the mean value of Gravitational Acceleration
 
-standard_error_gravitational_acceleration = ((total_length/Mean_Squared_Time_Period)*numpy.sqrt((pow(standard_error_total_length/total_length, 2) + pow(standard_error_squared_time_period/Mean_Squared_Time_Period, 2))))
-print("\nThe Standard Error in the mean value of Gravitational Acceleration is: " + str(round(standard_error_gravitational_acceleration, 4)))
+standard_error_gravitational_acceleration = (math.pi*math.pi*4*ratio_length_to_time_period_squared*numpy.sqrt((pow(standard_error_total_length/total_length, 2) + pow(standard_error_squared_time_period/Mean_Squared_Time_Period, 2))))
+print("The Standard Error in the value of Gravitational Acceleration is: " + str(round(standard_error_gravitational_acceleration, 4)))
 
 
 #finding percentage error in Gravitational acceleration.
 
 PercentageErrorGravitationalAcceleration = (standard_error_gravitational_acceleration/mean_value_gravitational_acceleration)*100
-print("\nThe Percentage Error in the mean value of Gravitational Acceleration is: " + str(round(PercentageErrorGravitationalAcceleration, 4)) + "%")
+print("The Percentage Error in the value of Gravitational Acceleration is: " + str(round(PercentageErrorGravitationalAcceleration, 4)) + "%")
 
