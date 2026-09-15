@@ -51,7 +51,7 @@ print("Standard Error in Width is: " + str(round(standard_error_width, 4)))
 
 Perimeter = 2*(mean_value_length + mean_value_width)
 
-standard_errorperimeter = numpy.sqrt((pow(standard_error_length, 2)+ pow(standard_error_width, 2)))
+standard_errorperimeter = 2*numpy.sqrt((pow(standard_error_length, 2)+ pow(standard_error_width, 2)))
 
 print("\nThe Perimeter is: " + str(Perimeter) + " ± " + str(round(standard_errorperimeter, 4)))
 
