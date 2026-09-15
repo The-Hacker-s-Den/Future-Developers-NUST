@@ -50,6 +50,8 @@ print("\nThe Total Length of the String is: " + str(round(total_length, 4)) + " 
 standard_deviation_total_length_of_string = standard_error_total_length*numpy.sqrt(len(lengths_of_string))
 print("The Standard Deviation in the Total length of the String is: " + str(round(standard_deviation_total_length_of_string, 4)))
 
+print("The Standard Error in the Total Length of the String is: " + str(round(standard_error_total_length, 4)) + "\n\n")
+
 
 #Working On Time Periods
 print("\n\nWorking on the Time Periods:\n")
