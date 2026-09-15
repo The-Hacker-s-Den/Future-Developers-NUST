@@ -85,6 +85,6 @@ print("The Standard Error in the value of Gravitational Acceleration is: " + str
 
 #finding percentage error in Gravitational acceleration.
 
-PercentageErrorGravitationalAcceleration = (standard_error_gravitational_acceleration/gravitational_acceleration)*100
-print("The Percentage Error in the value of Gravitational Acceleration is: " + str(round(PercentageErrorGravitationalAcceleration, 4)) + "%")
+percentage_error_gravitationalacceleration = (standard_error_gravitational_acceleration/gravitational_acceleration)*100
+print("The Percentage Error in the value of Gravitational Acceleration is: " + str(round(percentage_error_gravitationalacceleration, 4)) + "%")
 
