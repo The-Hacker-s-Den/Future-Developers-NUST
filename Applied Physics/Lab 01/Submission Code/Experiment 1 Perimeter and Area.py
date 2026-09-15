@@ -33,7 +33,7 @@ print("Standard Error in Length is: " + str(round(standard_error_length, 4)))
 #Mean width
 mean_value_width = numpy.mean(width)
 print("\n\nWidth:\n")
-print("Mean width is: " + str(mean_value_width))
+print("Mean Width is: " + str(mean_value_width))
 
 
 #Standard Deviation in width
